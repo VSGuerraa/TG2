@@ -1,0 +1,1 @@
+{"0": {"nome": "I1", "CLBs": 5, "BRAM": 640, "DSPs": 4, "Lat": 119, "Throughput": 22233}, "1": {"nome": "I2", "CLBs": 8, "BRAM": 1024, "DSPs": 0, "Lat": 143, "Throughput": 18339}, "2": {"nome": "I3", "CLBs": 9, "BRAM": 1152, "DSPs": 2, "Lat": 192, "Throughput": 43477}, "3": {"nome": "I4", "CLBs": 9, "BRAM": 1152, "DSPs": 2, "Lat": 19, "Throughput": 99588}}

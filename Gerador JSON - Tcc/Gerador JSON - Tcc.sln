@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Gerador JSON - Tcc", "Gerador JSON - Tcc.pyproj", "{44CE1AAE-8001-472B-B5E6-09DC9CFF8FF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44CE1AAE-8001-472B-B5E6-09DC9CFF8FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44CE1AAE-8001-472B-B5E6-09DC9CFF8FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35F26E35-5FCE-4330-AD1F-DCF57C9256DF}
+	EndGlobalSection
+EndGlobal
