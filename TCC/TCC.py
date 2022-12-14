@@ -9,10 +9,11 @@ from dataclasses import dataclass
 
 def gerador_Dados(nro_Nodos,nro_Links,nro_Req):
 
-    implementacoes = {}
+    #implementacoes_FW = {}
+    #implementacoes_DPI = {}
     funcao = {}
     requisicoes = {}
-
+    '''
     for i in range (0,4):
     
         randval= random.randint(2,10)
@@ -29,11 +30,81 @@ def gerador_Dados(nro_Nodos,nro_Links,nro_Req):
         "Lat" : Lat,
         "Throughput": Thro
         }
-    for j in range (0,6):
+    '''
+    implementacoes_FW=[{
+        "nome" : "Pequeno",
+        "CLBs" : 1150,
+        "BRAM" : 5,
+        "DSPs" : 0,
+        "Lat" : 4.2,
+        "Throughput": 2.9},
+        {
+        "nome" : "Medio",
+        "CLBs" : 8537,
+        "BRAM" : 1,
+        "DSPs" : 0,
+        "Lat" : 23,
+        "Throughput": 2},
+        {
+        "nome" : "Grande",
+        "CLBs" : 8123,
+        "BRAM" : 241,
+        "DSPs" : 0,
+        "Lat" : 73,
+        "Throughput": 92.16
+        }]
 
+    implementacoes_DPI=[{
+        "nome" : "I0",
+        "CLBs" : 8377,
+        "BRAM" : 37,
+        "DSPs" : 0,
+        "Lat" : 278,
+        "Throughput": 0.8},
+        {
+        "nome" : "I1",
+        "CLBs" : 8612,
+        "BRAM" : 438,
+        "DSPs" : 0,
+        "Lat" : 2778,
+        "Throughput": 0.8},
+        {
+        "nome" : "I2",
+        "CLBs" : 15206,
+        "BRAM" : 36,
+        "DSPs" : 0,
+        "Lat" : random.ranint(278,2778),
+        "Throughput": 14.4},
+        {
+        "nome" : "I3",
+        "CLBs" : 5154,
+        "BRAM" : 407,
+        "DSPs" : 0,
+        "Lat" : random.ranint(278,2778),
+        "Throughput": 40},
+        {
+        "nome" : "I4",
+        "CLBs" : 713,
+        "BRAM" : 96,
+        "DSPs" : 0,
+        "Lat" : random.ranint(278,2778),
+        "Throughput": 40},
+        {
+        "nome" : "I5",
+        "CLBs" : 6048,
+        "BRAM" : 399,
+        "DSPs" : 0,
+        "Lat" : random.ranint(278,2778),
+        "Throughput": 102.6
+    }]
+
+    nro_Func=random.randint(3,10)
+    for j in range (nro_Func):
+
+        
         funcao[j] = {
             "nome": "F" + str(j),
-            "implementacao": implementacoes[random.randint(0,i)]
+            "implementacao": implementacoes[random.randint(0,(len(implementacoes)-1))]
             }
 
     for k in range (0,nro_Req):
@@ -250,7 +321,7 @@ def check_Path(node_D,nodos,req):
                     valid_Path=1
                     
     return [valid_Path,node_D,new_Thro]
-#checa se o caminho do nodo inicial até o final é válido em relação a latência e vazão
+#checa se o caminho do nodo inicial atï¿½ o final ï¿½ vï¿½lido em relaï¿½ï¿½o a latï¿½ncia e vazï¿½o
 
 
 
