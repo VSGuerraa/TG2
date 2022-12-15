@@ -9,8 +9,7 @@ from dataclasses import dataclass
 
 def gerador_Dados(nro_Nodos,nro_Links,nro_Req):
 
-    #implementacoes_FW = {}
-    #implementacoes_DPI = {}
+    implementacoes=[]
     funcao = {}
     requisicoes = {}
     '''
@@ -31,66 +30,64 @@ def gerador_Dados(nro_Nodos,nro_Links,nro_Req):
         "Throughput": Thro
         }
     '''
-    implementacoes_FW=[{
-        "nome" : "Pequeno",
+    implementacoes=[{
+        "nome" : "FW0",
         "CLBs" : 1150,
         "BRAM" : 5,
         "DSPs" : 0,
         "Lat" : 4.2,
         "Throughput": 2.9},
         {
-        "nome" : "Medio",
+        "nome" : "FW1",
         "CLBs" : 8537,
         "BRAM" : 1,
         "DSPs" : 0,
         "Lat" : 23,
         "Throughput": 2},
         {
-        "nome" : "Grande",
+        "nome" : "FW2",
         "CLBs" : 8123,
         "BRAM" : 241,
         "DSPs" : 0,
         "Lat" : 73,
-        "Throughput": 92.16
-        }]
-
-    implementacoes_DPI=[{
-        "nome" : "I0",
+        "Throughput": 92.16},
+        {
+        "nome" : "DPI0",
         "CLBs" : 8377,
         "BRAM" : 37,
         "DSPs" : 0,
         "Lat" : 278,
         "Throughput": 0.8},
         {
-        "nome" : "I1",
+        "nome" : "DPI1",
         "CLBs" : 8612,
         "BRAM" : 438,
         "DSPs" : 0,
         "Lat" : 2778,
         "Throughput": 0.8},
         {
-        "nome" : "I2",
+        "nome" : "DPI2",
         "CLBs" : 15206,
         "BRAM" : 36,
         "DSPs" : 0,
         "Lat" : random.ranint(278,2778),
         "Throughput": 14.4},
         {
-        "nome" : "I3",
+        "nome" : "DPI3",
         "CLBs" : 5154,
         "BRAM" : 407,
         "DSPs" : 0,
         "Lat" : random.ranint(278,2778),
         "Throughput": 40},
         {
-        "nome" : "I4",
+        "nome" : "DPI4",
         "CLBs" : 713,
         "BRAM" : 96,
         "DSPs" : 0,
         "Lat" : random.ranint(278,2778),
         "Throughput": 40},
         {
-        "nome" : "I5",
+        "nome" : "DPI5",
         "CLBs" : 6048,
         "BRAM" : 399,
         "DSPs" : 0,
@@ -98,13 +95,23 @@ def gerador_Dados(nro_Nodos,nro_Links,nro_Req):
         "Throughput": 102.6
     }]
 
-    nro_Func=random.randint(3,10)
+    
+
+
+    nro_Func=random.randint(8,10)
+    
     for j in range (nro_Func):
 
-        
+        sort_func=random.randint(0,len(implementacoes)-1)
+        if implementacoes[:1]=='FW':
+            nome='Firewall'
+        elif implementacoes[:1]=='DP':
+            nome='Deep Packet Inspection'
+        elif implementacoes[:1]=='AE'
+            nome='AES'
         funcao[j] = {
-            "nome": "F" + str(j),
-            "implementacao": implementacoes[random.randint(0,(len(implementacoes)-1))]
+            "Nome": nome,
+            "implementacao": implementacoes[sort_func]
             }
 
     for k in range (0,nro_Req):
